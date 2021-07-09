@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERIKAFLIX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="../img/logoNF.png" class="page-logo"
+            alt="erikaflix">
+
+        <h2 class="page-title">
+            Qual seu filme favorito?
+        </h2>
+
+        <div class="form-wrapper">
+            <input type="text" id="filme" name="filme" placeholder="Insira endereço de imagem">
+            
+            <button onClick="adicionarFilme()">Adicionar Filme</button>
+        </div>
+    </div>
+
+    <div id="listaFilmes"></div>
+    <script src="app.js"></script>
+</body>
+</html>

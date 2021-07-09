@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../img/img-fundo-nf.jpg);
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  margin: 20px auto;
+  text-decoration: none;
+  color: #aaa;
+}
+
+.placeholder {
+  padding-left: 7px;
+}
+
+.logo {
+  width: 250px;
+}
+.img-logo {
+  height: 110px;
+}
+
+.login-fundo {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  /* min-height: 660px; */
+  width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
+  color: #aaa;
+}
+
+.container {
+  /* background-color: rgba(189, 204, 149, 0.75); */
+  width: 300px;
+  height: 300px;
+  margin-bottom: 300px;
+}
+
+.entrar {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
+.login-content {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+input,
+button {
+  height: 50px;
+  font-size: 1.2rem;
+  padding: 16 20px;
+  border-radius: 4px;
+  border: 0;
+}
+
+input {
+  background: #fff;
+  border: 0;
+  margin-bottom: 15px;
+  font-size: small;
+}
+
+button {
+  background: #e50914;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #757575;
+  width: 100%;
+  height: 238px;
+  position: 0;
+  padding: 30px;
+}
+
+.blocoInformacoes {
+  margin: 0 200px 0 200px;
+  padding: 30px 0 30px 0;
+}
+
+.duvidas {
+  margin-bottom: 30px;
+}
+
+.informacoes {
+  list-style: none;
+  font-size: 13px;
+}
+li {
+  float: left;
+  padding-right: 150px;
+  margin-bottom: 25px;
+}
