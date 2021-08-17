@@ -8,23 +8,25 @@
     <title>cadastrar usuário</title>
 </head>
 <body>
-    <div>
+
         <div class="img-logo">
             <img class="logo" src="../img/logoNF.png">
         </div>
-        
-        <div class="login-fundo">
-            <div class="container">
-                <div class="login-content">
-                    <h1 class="entrar">Cadastro</h1>
-                <input class="placeholder" type="nome" placeholder="Nome usuário" />
-                <input class="placeholder" type="email" placeholder="Email" />
-                <input class="placeholder" type="senha" placeholder="Senha" />
-                <input class="placeholder" type="senha" placeholder="Repetir senha" />
-                <button>Cadastrar</button>
+        <form >
+            <div class="login-fundo">
+                <div class="container">
+                    <div class="login-content">
+                        <h1 class="entrar">Cadastro</h1>
+                        <input class="placeholder" type="nome" id="usuario" placeholder="Nome usuário" />
+                        <input class="placeholder" type="email" id="email" placeholder="Email" />
+                        <input class="placeholder" type="senha" id="senha" placeholder="Senha" />
+                        <input class="placeholder" type="senha" id="repetirSenha" placeholder="Repetir senha" />
+                        <button type="button" onclick="pegaValores()">Cadastrar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </form>
+
+    <script src="./cadastroCliente.js"></script>
 </body>
 </html>
