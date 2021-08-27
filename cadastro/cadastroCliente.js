@@ -1,9 +1,3 @@
-/*
-1- O botao so vai ficar habilitado se todos os campos estiverem preenchidos;
-https://github.com/wendellcalixtoo/Unsubscribe-Application/blob/main/src/pages/Layout01.vue
-
-*/
-
 function pegaValores() {
     let usuario = document.getElementById('usuario').value
     let email = document.getElementById('email').value
@@ -15,10 +9,10 @@ function pegaValores() {
         email: email,
         senha: senha,
         repetirSenha: repetirSenha
-    }
+    };
     
     this.validaCampos(objeto)
-}
+};
 
 
  function validaCampos(objeto) {
@@ -36,9 +30,5 @@ function pegaValores() {
             }
     } else {
         console.log('Validação de campos Negado')
-    }
- }
-
-
-// let inputCriancas = document.getElementById("criancas");
-    // console.log(inputCriancas)
+    };
+ };
