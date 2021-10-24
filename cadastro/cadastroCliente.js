@@ -1,50 +1,38 @@
 
-//Pega valores do cadastro em geral
+//Pega valores cadastro 
 function pegaValores() {
     let usuario = document.getElementById('usuario').value
     let email = document.getElementById('email').value
     let senha = document.getElementById('senha').value
     let repetirSenha = document.getElementById('repetirSenha').value
 
-    const objeto = {
+    const form = {
         usuario: usuario,
         email: email,
         senha: senha,
         repetirSenha: repetirSenha
     };
     
-    this.validaCampos(objeto)
+    this.validaCampos(form)
 };
 
-/*Campos Preenchidos: 
-(Senhas iguais validar), 
-Senhas diferentes (gerar alerta), 
-Falta Caracteres (gerar alerta),
+//validar campos cadastro
+ function validaCampos(form) {
+    let camposPreenchidos = form.usuario.length > 0 && form.email.length > 0 
+    && form.senha.length > 0 && form.repetirSenha.length > 0
 
-*/
- function validaCampos(objeto) {
-    let camposPreenchidos = objeto.usuario.length > 0 && objeto.email.length > 0 
-    && objeto.senha.length > 0 && objeto.repetirSenha.length > 0
-    console.log(camposPreenchidos)
+   if(camposPreenchidos) { 
+            if(form.senha === form.repetirSenha) { 
+                 console.log('Senhas iguais')
 
-   if(camposPreenchidos) {
-            console.log('Validação de campos Ok') //
-            if(objeto.senha === objeto.repetirSenha) {
-                console.log('Senhas iguais')
-            } else {
-                console.log('Senhas diferentes')
+            } else { 
+                alert('Senhas Diferentes')         
             }
-    } else {
-        console.log('Validação de campos Negado')
+    } else { 
+        alert('Preencha todos os campos!')
     };
  };
 
- let senha = document.getElementById('senha').value
-if (senha.length > 7){
-   console.log('teste')
-}
-
- //Comprimento de caracteres e numeros nos campos
 
 
  
