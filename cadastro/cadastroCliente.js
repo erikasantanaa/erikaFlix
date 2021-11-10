@@ -5,6 +5,7 @@ function pegaValores() {
     let email = document.getElementById('email').value
     let senha = document.getElementById('senha').value
     let repetirSenha = document.getElementById('repetirSenha').value
+    let button = document.getElementById('botao').value 
 
     const form = {
         usuario: usuario,
@@ -32,6 +33,11 @@ function pegaValores() {
         alert('Preencha todos os campos!')
     };
  };
+
+
+//salvar localStorage
+
+
 
 
 

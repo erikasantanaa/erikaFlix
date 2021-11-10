@@ -1,3 +1,5 @@
+
+//
 function adicionarFilme() {
     const campoFilme = document.querySelector('#filme')
     const filmeFavorito = campoFilme.value

@@ -13,7 +13,10 @@ function pegarValoresLogin() {
 
 //Validar campos login
 function validarLogin(login) {
-    if(login.email.length > 0 && login.senha.length > 0) {
+    let camposLoginPreenchidos = login.email.length > 0
+     && login.senha.length > 0
+
+    if(camposLoginPreenchidos) {
         console.log('Campos preenchidos')
     } else {
         alert('Preencha todos os campos!')
