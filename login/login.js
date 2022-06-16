@@ -1,24 +1,39 @@
-//pehar valores login
-function pegarValoresLogin() {
-    let email = document.getElementById('email').value
-    let senha = document.getElementById('senha').value
+const button = document.querySelector('#button')
 
-    const login = {
-        email: email,
-        senha: senha
-    };
+button.addEventListener('click', (event) => {
+    event.preventDefault()
 
-    this.validarLogin(login)
-};
+    const email = document.querySelector('#email')
+    const password = document.querySelector('#password')
 
-//Validar campos login
-function validarLogin(login) {
-    let camposLoginPreenchidos = login.email.length > 0
-     && login.senha.length > 0
-
-    if(camposLoginPreenchidos) {
-        console.log('Campos preenchidos')
+    if (email.value === '' ) {
+        email.classList.add('errorInput')
     } else {
-        alert('Preencha todos os campos!')
-    };        
-};
+        email.classList.remove('errorInput')
+    }
+
+    if (password.value === '' ) {
+        password.classList.add('errorInput')
+    } else {
+        email.classList.remove('errorInput')
+    }
+
+    //validação email
+    if (email.value.indexOf('@') === -1 || email.value.indexOf('.') === -1 || (email.value.indexOf('.') - email.value.indexOf('@') == 1)) {
+        email.classList.add('errorInput')
+    } else  {
+        email.classList.remove('errorInput')
+    }
+
+    //validação número telefone
+    if (!isNaN(email.value) === true && email.value.length == 11) {
+        email.classList.remove('errorInput')
+    }
+
+    //validação senha
+    if (password.value.length <= 5) {
+        password.classList.add('errorInput')
+    } else {
+        email.classList.remove('errorInput')
+    }
+})
