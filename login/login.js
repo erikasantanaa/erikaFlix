@@ -1,39 +1,51 @@
-const button = document.querySelector('#button')
 
-button.addEventListener('click', (event) => {
+function pegarValoresLogin(event) {
     event.preventDefault()
 
-    const email = document.querySelector('#email')
-    const password = document.querySelector('#password')
+    let email = document.querySelector('#email').value
+    let password = document.querySelector('#password').value
 
-    if (email.value === '' ) {
+    const login = {
+        email: email,
+        password: password
+    };
+
+    this.validarLogin(login)
+};
+
+
+/**Validar campos login*/
+function validarLogin(login) {
+    let EspacoEmBrancoEmail = login.email.length > 0 
+    let EspacoEmBrancoPassword = login.password.length > 0
+    let validarEmail = login.email.indexOf('@') === -1 || login.email.indexOf('.') === -1 || (login.email.indexOf('.') - login.email.indexOf('@') == 1)
+    let validar = /^.{5,6}$/
+    let validarSenha = validar.test(login.password)
+
+    if(EspacoEmBrancoEmail) {
+        email.classList.remove('errorInput')
+    } else {
         email.classList.add('errorInput')
-    } else {
-        email.classList.remove('errorInput')
-    }
+    };   
 
-    if (password.value === '' ) {
+    if(EspacoEmBrancoPassword) {
+        password.classList.remove('errorInput')
+    } else {
         password.classList.add('errorInput')
-    } else {
-        email.classList.remove('errorInput')
-    }
+    };   
 
-    //validação email
-    if (email.value.indexOf('@') === -1 || email.value.indexOf('.') === -1 || (email.value.indexOf('.') - email.value.indexOf('@') == 1)) {
+    if (validarEmail) {
         email.classList.add('errorInput')
     } else  {
         email.classList.remove('errorInput')
     }
 
-    //validação número telefone
-    if (!isNaN(email.value) === true && email.value.length == 11) {
-        email.classList.remove('errorInput')
-    }
-
-    //validação senha
-    if (password.value.length <= 5) {
-        password.classList.add('errorInput')
+    if (validarSenha ) {
+        password.classList.remove('errorInput')
     } else {
-        email.classList.remove('errorInput')
+        password.classList.add('errorInput')
+        
     }
-})
+};
+
+
