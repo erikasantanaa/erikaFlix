@@ -1,45 +1,46 @@
-
 function pegarValoresLogin(event) {
     event.preventDefault()
-
+    
     let email = document.querySelector('#email').value
     let password = document.querySelector('#password').value
-
+    
     const login = {
         email: email,
         password: password
     };
-
+    
     this.validarLogin(login)
 };
 
 
-/**Validar campos login*/
+/**Validar campos login - verificar erro no input email*/
 function validarLogin(login) {
-    let EspacoEmBrancoEmail = login.email.length > 0 
-    let EspacoEmBrancoPassword = login.password.length > 0
-    let validarEmail = login.email.indexOf('@') === -1 || login.email.indexOf('.') === -1 || (login.email.indexOf('.') - login.email.indexOf('@') == 1)
-    let validar = /^.{5,6}$/
-    let validarSenha = validar.test(login.password)
+    const EspacoEmBranco = login.email.length > 0 || login.password.length > 0
+ 
+    const validarEmailRegex = /^\w+@[a-z]+(\.[a-z]+){1,2}$/
+    const validarEmail = validarEmailRegex.test(login.email)
 
-    if(EspacoEmBrancoEmail) {
+    let validarSenhaRegex = /^.{5,6}$/
+    let validarSenha = validarSenhaRegex.test(login.password)
+    
+    if(EspacoEmBranco) {
         email.classList.remove('errorInput')
     } else {
         email.classList.add('errorInput')
     };   
-
-    if(EspacoEmBrancoPassword) {
+    
+    if(EspacoEmBranco) {
         password.classList.remove('errorInput')
     } else {
         password.classList.add('errorInput')
     };   
-
+    
     if (validarEmail) {
         email.classList.add('errorInput')
     } else  {
         email.classList.remove('errorInput')
     }
-
+    
     if (validarSenha ) {
         password.classList.remove('errorInput')
     } else {
@@ -47,5 +48,3 @@ function validarLogin(login) {
         
     }
 };
-
-
